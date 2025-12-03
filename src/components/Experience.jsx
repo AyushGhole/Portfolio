@@ -5,10 +5,16 @@ export default function Experience() {
   const experiences = [
     {
       role: "Full Stack Developer Intern",
-      company: "Systemic Altruism",
+      company: "Systemic Altruism, San Francisco, USA(Remote)",
       date: "Mar 2025 - Jun 2025",
-      description:
-        "Developed real-time chat features using React, Node.js, and Socket.IO, including audio message recording & playback. Built organization and channel management interfaces, implemented file uploads and integrated MongoDB for structured data management. Ensured responsive and modern UI using Tailwind CSS and shadcn/ui.",
+      description: [
+        "Architected a real-time chat application using Socket.IO and React, supporting 500+ concurrent WebSocket connections with sub-100ms latency.",
+        "Implemented role-based access control (RBAC) with secure JWT authentication, managing permissions across users, channels, and organizations.",
+        "Built a scalable media pipeline for images and audio with automatic validation, compression, and CDN-based delivery.",
+        "Optimized MongoDB performance using indexing + query optimization, reducing average API latency from 200ms to 80ms.",
+        "Developed end-to-end organization and channel management features including search, filter, and full CRUD operations.",
+        "Improved system reliability through error boundaries, structured logging, and automatic retry mechanisms across microservices.",
+      ],
       tech: [
         "React",
         "Node.js",
@@ -19,6 +25,28 @@ export default function Experience() {
         "WebRTC",
       ],
       logo: "sa.jpg",
+    },
+    {
+      role: "Full Stack Developer",
+      company: "Sortwind Pvt Ltd, Ghaziabad, India",
+      date: "Jul 2025 – Oct 2025",
+      description: [
+        "Developed production-ready full-stack modules using MERN stack, serving 1000+ concurrent users with 99.9% uptime.",
+        "Built RESTful APIs with JWT authentication, input validation, and structured routing using Node.js/Express, reducing unauthorized access attempts by 100%.",
+        "Designed optimized MongoDB schemas with proper indexing, improving query performance by 40% for chat history retrieval.",
+        "Implemented end-to-end testing with Jest and Postman, achieving 85%+ code coverage and reducing production bugs by 60%.",
+        "Collaborated in Agile code reviews and debugging sessions, improving codebase quality and system stability across deployment pipelines.",
+      ],
+      tech: [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Tailwind CSS",
+        "Jest",
+        "REST APIs",
+      ],
+      logo: "sort.JPG", // Add your company logo here
     },
   ];
 
@@ -78,9 +106,17 @@ export default function Experience() {
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-300 leading-relaxed mb-6 text-lg">
-                  {exp.description}
-                </p>
+                <ul className="text-gray-300 leading-relaxed mb-6 space-y-3 text-lg list-disc list-inside">
+                  {exp.description.map((point, i) => (
+                    <motion.li
+                      key={i}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.4, delay: i * 0.1 }}>
+                      {point}
+                    </motion.li>
+                  ))}
+                </ul>
 
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2">

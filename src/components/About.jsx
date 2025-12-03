@@ -3,11 +3,10 @@ import { motion } from "framer-motion";
 
 export default function About() {
   const paragraphs = [
-    "Hi! I’m ",
-    "a passionate and driven Full-Stack Developer with a knack for building efficient, user-friendly web applications.",
-    "I enjoy transforming ideas into real-life products that make a difference. With a strong foundation in React, Node.js, and modern JavaScript frameworks, I love solving challenging problems and continually expanding my skill set.",
-    "Apart from coding, I enjoy contributing to open-source projects, collaborating with diverse teams, and staying up-to-date with the latest industry trends. My goal is to create impactful digital experiences that help people and businesses grow.",
-    "Let’s connect and build something amazing together!",
+    "Hi! I’m Ayush Ghole, ",
+    "A Full-Stack Developer with 6+ months of experience building scalable MERN applications and real-time systems using WebRTC. Optimized database performance by 40%, implemented secure JWT/RBAC authentication, and delivered production features supporting 1000+ concurrent users.",
+    "Skilled in REST APIs, microservices, React/Tailwind UI, and automated testing (85%+ coverage).",
+    "Strong academic record with 9.29 CGPA and a passion for creating reliable, user-centric products at scale.",
   ];
 
   return (
