@@ -18,7 +18,6 @@ export default function App() {
         <Projects />
         <Skills />
         <Contact />
-        {/* Next sections will go here */}
       </main>
       <Footer />
     </div>

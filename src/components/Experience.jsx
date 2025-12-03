@@ -1,5 +1,4 @@
 // src/components/Experience.jsx
-
 import { motion } from "framer-motion";
 
 export default function Experience() {
@@ -9,7 +8,7 @@ export default function Experience() {
       company: "Systemic Altruism",
       date: "Mar 2025 - Jun 2025",
       description:
-        "Built dynamic UI components using Tailwind CSS and shadcn/ui, ensuring responsive design and user-friendly experience. Developed and deployed real-time chat functionality using React, Node.js, and Socket.IO, supporting features like audio messages, file uploads, typing indicators, and read receipts. Implemented audio message recording, upload, and playback system with media APIs, backend integration, and database storage. Collaborated with backend services to handle file uploads (images/audio) securely and stored metadata in a structured database schema. Utilized MongoDB to manage chat history, user activity, and organization data. Designed and integrated organization and channel management system, enabling users to create, search, and manage categorized chat channels. Wrote modular, maintainable code and participated in code reviews to ensure quality and consistency.",
+        "Developed real-time chat features using React, Node.js, and Socket.IO, including audio message recording & playback. Built organization and channel management interfaces, implemented file uploads and integrated MongoDB for structured data management. Ensured responsive and modern UI using Tailwind CSS and shadcn/ui.",
       tech: [
         "React",
         "Node.js",
@@ -19,59 +18,82 @@ export default function Experience() {
         "Sockets",
         "WebRTC",
       ],
-      logo: "sa.jpg", // ✅ Add your logo path here
+      logo: "sa.jpg",
     },
-    // Add more experiences as needed
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white text-gray-800">
-      <div className="container mx-auto px-4 max-w-5xl">
+    <section
+      id="experience"
+      className="relative py-24 px-4 bg-gradient-to-b from-black via-indigo-950 to-black text-white overflow-hidden">
+      {/* 🔹 Subtle Grid Background */}
+      <div className="absolute inset-0 pointer-events-none opacity-10 bg-[url('/grid.svg')] bg-cover"></div>
+
+      <div className="relative max-w-6xl mx-auto">
+        {/* Header */}
         <motion.h2
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold mb-12 text-center">
+          className="text-center text-5xl font-extrabold mb-16 
+            bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
           Experience
         </motion.h2>
 
-        <div className="space-y-12">
+        <div className="flex flex-col gap-10">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              transition={{ duration: 0.7, delay: index * 0.15 }}
               viewport={{ once: true }}
-              className="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
-              {/* ✅ Logo and title flex layout */}
-              <div className="flex items-center space-x-4 mb-3">
-                {exp.logo && (
+              className="relative group">
+              {/* Outer glowing layer */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500/30 to-purple-500/30 blur-xl opacity-0 group-hover:opacity-100 transition duration-500"></div>
+
+              {/* Glass Card */}
+              <div
+                className="relative p-8 md:p-10 rounded-2xl 
+                bg-black/40 backdrop-blur-xl shadow-2xl 
+                ring-1 ring-white/10 hover:scale-[1.01] 
+                transition-all duration-500">
+                {/* Top Row */}
+                <div className="flex items-start gap-6 mb-6">
+                  {/* Company Logo */}
                   <img
                     src={exp.logo}
-                    alt={`${exp.company} logo`}
-                    className="w-12 h-12 object-contain"
+                    className="w-20 h-20 rounded-xl object-cover shadow-lg ring-2 ring-indigo-500/40"
+                    alt=""
                   />
-                )}
-                <div>
-                  <h3 className="text-2xl font-semibold">{exp.role}</h3>
-                  <p className="text-indigo-600 font-medium">
-                    {exp.company} — {exp.date}
-                  </p>
+
+                  {/* Title + Info */}
+                  <div>
+                    <h3 className="text-3xl font-bold">{exp.role}</h3>
+                    <p className="text-indigo-400 text-lg font-medium mt-1">
+                      {exp.company} — {exp.date}
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <p className="mb-4 text-gray-700">{exp.description}</p>
+                {/* Description */}
+                <p className="text-gray-300 leading-relaxed mb-6 text-lg">
+                  {exp.description}
+                </p>
 
-              <div className="flex flex-wrap gap-2">
-                {exp.tech.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2 py-1 rounded-full">
-                    {tech}
-                  </span>
-                ))}
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2">
+                  {exp.tech.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-1 text-sm rounded-full 
+                      bg-indigo-700/40 text-indigo-200 
+                      ring-1 ring-indigo-400/20 backdrop-blur-sm">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}

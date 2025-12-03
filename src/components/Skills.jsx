@@ -40,6 +40,7 @@ export default function Skills() {
     <section id="skills" className="py-20 bg-white text-gray-800">
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.h2
+          id="skills"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

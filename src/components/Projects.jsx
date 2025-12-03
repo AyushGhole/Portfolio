@@ -13,64 +13,77 @@ export default function Projects() {
     {
       title: "Wonderlust",
       description:
-        "Is a dynamic and user-friendly travel accommodation platform, similar to Airbnb, designed for explorers seeking unique stays and memorable experiences.",
+        "A dynamic travel accommodation platform like Airbnb smooth booking experience.",
       image: "wonderlust.png",
       link: "https://wonderlust-in.onrender.com/listing",
-      tech: "React, Tailwind CSS, MERN(MVC Architecture)",
+      tech: "React, Tailwind CSS, MERN (MVC Architecture)",
     },
     {
       title: "MeetCall",
       description:
-        "MeetCall.in is a modern video call web application designed for seamless real-time communication.",
+        "A modern video calling webapp designed for seamless, real-time communication with WebRTC.",
       image: "meetcall.png",
       link: "https://meetvideocall.onrender.com/",
-      tech: "Socket.IO,  Tailwind CSS, RESTful API, Material UI, Render,   Bootstrap, , WebRTC, MERN.",
+      tech: "Socket.IO, WebRTC, MERN, Tailwind, MUI",
     },
     {
       title: "PayWay.in",
       description:
-        "This is PayWay.in — a payment gateway similar to Razorpay or PayPal, plus a virtual bank with account creation and banking facilities.",
+        "A payment gateway like Razorpay + virtual banking with account system & transactions.",
       image: "payway.png",
       link: "https://payway-in.onrender.com/main",
-      tech: "React, MVC Architecture, MERN",
+      tech: "React, MERN, MVC Architecture",
     },
     {
       title: "Zerodha",
       description:
-        "This is the Stock exchange and investment website for easily investing the customers asset into the trusted funds and stocks. Integrated real-time stock market data.",
+        "Stock investment platform with real-time market data and professional UI.",
       image: "zerodha.png",
       link: "https://zerodha-frontend-h6my.onrender.com/",
-      tech: "MERN,Tailwind CSS",
+      tech: "MERN, Tailwind CSS",
     },
     {
       title: "ChatApp",
       description:
-        "TA Real-time Chat Application built with MERN stack & Socket.io featuring secure authentication, instant messaging, and real-time update and see messages instantly. ",
+        "Real-time chat application using MERN & Socket.io with secure auth, instant messaging.",
       image: "chatapp.png",
       link: "https://sytemicaltruism.onrender.com/",
-      tech: "MERN, Sockets, Tailwind Css",
+      tech: "Sockets, MERN, Tailwind",
     },
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-100 text-gray-800">
-      <div className="container mx-auto px-4 max-w-6xl relative">
+    <section
+      id="projects"
+      className="
+        relative py-24
+        bg-gradient-to-b from-[#0A0A0F] via-[#0F0F17] to-[#0A0A0F]
+        text-gray-200 overflow-hidden
+      ">
+      {/* Decorative Glow */}
+      <div className="absolute inset-0 pointer-events-none opacity-30">
+        <div className="absolute w-72 h-72 bg-purple-600 blur-[130px] top-10 left-10"></div>
+        <div className="absolute w-72 h-72 bg-blue-600 blur-[150px] bottom-10 right-10"></div>
+      </div>
+
+      <div className="container mx-auto px-4 max-w-7xl relative z-10">
+        {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold mb-12 text-center">
+          className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">
           Projects
         </motion.h2>
 
-        {/* Navigation buttons */}
-        <div className="swiper-button-prev text-gray-600"></div>
-        <div className="swiper-button-next text-gray-600"></div>
+        {/* Navigation Buttons */}
+        <div className="swiper-button-prev text-gray-300 hover:text-white"></div>
+        <div className="swiper-button-next text-gray-300 hover:text-white"></div>
 
         <Swiper
           modules={[Pagination, Navigation]}
-          spaceBetween={30}
+          spaceBetween={35}
           slidesPerView={1}
           pagination={{ clickable: true }}
           navigation={{
@@ -83,7 +96,13 @@ export default function Projects() {
           }}>
           {projects.map((project, index) => (
             <SwiperSlide key={index}>
-              <ProjectCard {...project} />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+                viewport={{ once: true }}>
+                <ProjectCard {...project} />
+              </motion.div>
             </SwiperSlide>
           ))}
         </Swiper>
