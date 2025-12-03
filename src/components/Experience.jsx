@@ -27,7 +27,7 @@ export default function Experience() {
       logo: "sa.jpg",
     },
     {
-      role: "Full Stack Developer",
+      role: "Full Stack Developer Intern",
       company: "Sortwind Pvt Ltd, Ghaziabad, India",
       date: "Jul 2025 – Oct 2025",
       description: [
