@@ -51,7 +51,7 @@ function FloatingPlanes() {
 function RotatingCore({ hover }) {
   const coreRef = useRef();
   // Load Earth texture from local /public folder (place earth-night.jpg inside /public)
-  const earthTexture = useTexture("public/earth-night.jpeg");
+  const earthTexture = useTexture("/earth-night.jpeg");
 
   useFrame(({ clock }) => {
     if (!coreRef.current) return;
@@ -64,7 +64,7 @@ function RotatingCore({ hover }) {
   return (
     <group ref={coreRef}>
       {/* Main Earth night-side planet with real texture */}
-      <Sphere args={[1.7, 96, 96]} scale={3.4}>
+      <Sphere args={[1.7, 32, 32]} scale={3.4}>
         <meshStandardMaterial
           map={earthTexture}
           metalness={0.3}
