@@ -37,27 +37,50 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white text-gray-800">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section
+      id="skills"
+      className="relative py-20 bg-gradient-to-b from-[#050507] via-[#050816] to-[#020617] text-white overflow-hidden">
+      {/* Soft background glows */}
+      <div className="absolute inset-0 pointer-events-none opacity-40">
+        <div className="absolute -top-32 -left-16 w-80 h-80 bg-purple-600 blur-[120px]" />
+        <div className="absolute -bottom-40 right-0 w-96 h-96 bg-indigo-500 blur-[140px]" />
+      </div>
+
+      <div className="relative container mx-auto px-4 max-w-6xl">
         <motion.h2
-          id="skills"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold mb-12 text-center">
+          className="text-4xl md:text-5xl font-extrabold mb-10 text-center bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 text-transparent bg-clip-text">
           Skills & Tech Stack
         </motion.h2>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-8 place-items-center">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
+          viewport={{ once: true }}
+          className="max-w-2xl mx-auto mb-12 text-center text-sm md:text-base text-indigo-100/80">
+          From front-end interactions to back-end architecture, these are the
+          core technologies I use to ship scalable, production-ready products.
+        </motion.p>
+
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 md:gap-8 place-items-center">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex flex-col items-center space-y-2">
-              <div className="text-5xl">{skill.icon}</div>
-              <p className="text-sm font-medium text-center">{skill.name}</p>
+              whileHover={{ scale: 1.08, y: -4 }}
+              whileTap={{ scale: 0.96 }}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: index * 0.03 }}
+              viewport={{ once: true }}
+              className="w-full max-w-[130px] rounded-2xl bg-white/5 border border-white/10 shadow-lg shadow-indigo-900/30 px-3 py-4 flex flex-col items-center space-y-2 backdrop-blur-xl">
+              <div className="text-4xl md:text-5xl">{skill.icon}</div>
+              <p className="text-xs md:text-sm font-medium text-center text-indigo-50/90">
+                {skill.name}
+              </p>
             </motion.div>
           ))}
         </div>

@@ -55,15 +55,11 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="
-        relative py-24
-        bg-gradient-to-b from-[#0A0A0F] via-[#0F0F17] to-[#0A0A0F]
-        text-gray-200 overflow-hidden
-      ">
+      className="relative py-24 bg-gradient-to-b from-[#020617] via-[#020617] to-[#020617] text-gray-200 overflow-hidden">
       {/* Decorative Glow */}
-      <div className="absolute inset-0 pointer-events-none opacity-30">
-        <div className="absolute w-72 h-72 bg-purple-600 blur-[130px] top-10 left-10"></div>
-        <div className="absolute w-72 h-72 bg-blue-600 blur-[150px] bottom-10 right-10"></div>
+      <div className="absolute inset-0 pointer-events-none opacity-40">
+        <div className="absolute w-80 h-80 bg-purple-600 blur-[140px] top-0 -left-10" />
+        <div className="absolute w-80 h-80 bg-blue-600 blur-[160px] bottom-0 right-0" />
       </div>
 
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
@@ -73,13 +69,23 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-5xl font-bold mb-16 text-center bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">
+          className="text-4xl md:text-5xl font-extrabold mb-4 text-center bg-gradient-to-r from-purple-300 via-indigo-300 to-sky-300 text-transparent bg-clip-text">
           Projects
         </motion.h2>
 
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="max-w-2xl mx-auto mb-12 text-center text-sm md:text-base text-indigo-100/80">
+          Production-grade work spanning real-time communication, payments, and
+          scalable web platforms built with the MERN stack.
+        </motion.p>
+
         {/* Navigation Buttons */}
-        <div className="swiper-button-prev text-gray-300 hover:text-white"></div>
-        <div className="swiper-button-next text-gray-300 hover:text-white"></div>
+        <div className="swiper-button-prev text-gray-400 hover:text-white" />
+        <div className="swiper-button-next text-gray-400 hover:text-white" />
 
         <Swiper
           modules={[Pagination, Navigation]}
@@ -99,7 +105,7 @@ export default function Projects() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}>
                 <ProjectCard {...project} />
               </motion.div>
