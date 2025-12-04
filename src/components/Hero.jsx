@@ -45,6 +45,8 @@ export default function Hero() {
                 "Full Stack Developer • MERN • Web Architecture",
                 "Building real-time, scalable products end-to-end",
                 "Engineering clean UI and robust backend systems",
+                "Electronic & Computer Science Engineer", 
+                "Ex Intern @Systemic Altruism & @SortWind Pvt Ltd.",
               ]}
               typeSpeed={55}
               backSpeed={32}
