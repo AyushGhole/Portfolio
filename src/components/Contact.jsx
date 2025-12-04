@@ -28,7 +28,7 @@ export default function Contact() {
           <p className="mb-8 text-sm md:text-base text-indigo-100/80">
             Open to full-time roles, internships and impactful projects in web
             development and software engineering. If you think I’d be a good
-            fit, let’s talk.
+            fit, let’s connect.
           </p>
 
           {/* Social icons */}
