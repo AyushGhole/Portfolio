@@ -35,6 +35,7 @@ export default function Experience() {
         "Built RESTful APIs with JWT authentication, input validation, and structured routing using Node.js/Express, reducing unauthorized access attempts by 100%.",
         "Designed optimized MongoDB schemas with proper indexing, improving query performance by 40% for chat history retrieval.",
         "Implemented end-to-end testing with Jest and Postman, achieving 85%+ code coverage and reducing production bugs by 60%.",
+        "Led full-stack development across 4 real-world production projects, owning both frontend and backend architecture end-to-end.",
         "Collaborated in Agile code reviews and debugging sessions, improving codebase quality and system stability across deployment pipelines.",
       ],
       tech: [
