@@ -42,11 +42,11 @@ export default function Hero() {
           <div className="text-sm md:text-xl text-indigo-100/90 max-w-xl mx-auto md:mx-0">
             <ReactTyped
               strings={[
+                "Electronic And Computer Science Engineer", 
                 "Full Stack Developer • MERN • Web Architecture",
                 "Building real-time, scalable products end-to-end",
                 "Engineering clean UI and robust backend systems",
-                "Electronic And Computer Science Engineer", 
-                "Ex Intern @Systemic Altruism • Ex Intern @SortWind Pvt Ltd.",
+                "Ex-Intern @Systemic Altruism • @SortWind Pvt Ltd.",
               ]}
               typeSpeed={55}
               backSpeed={32}
