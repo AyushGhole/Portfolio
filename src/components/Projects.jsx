@@ -32,8 +32,8 @@ export default function Projects() {
         "PayWay is a MERN stack payment app with OTP-secure transactions and a responsive dashboard.
 ",
       image: "payway.png",
-      link: "https://payway-in.onrender.com/main",
-      tech: "React, MERN, MVC Architecture",
+      link: "https://payway-r2pg.onrender.com/",
+      tech: "React, MERN, Tailwind, MUI ,MVC Architecture",
     },
     {
       title: "Zerodha",
@@ -41,7 +41,7 @@ export default function Projects() {
         "Stock investment platform with real-time market data and professional UI.",
       image: "zerodha.png",
       link: "https://zerodha-frontend-h6my.onrender.com/",
-      tech: "MERN, Tailwind CSS",
+      tech: "React, MERN, Tailwind, MUI ,MVC Architecture",
     },
     {
       title: "ChatApp",
@@ -49,7 +49,7 @@ export default function Projects() {
         "Real-time chat application using MERN & Socket.io with secure auth, instant messaging.",
       image: "chatapp.png",
       link: "https://sytemicaltruism.onrender.com/",
-      tech: "Sockets, MERN, Tailwind",
+      tech: "Sockets, MERN, Tailwind CSS",
     },
   ];
 
