@@ -29,7 +29,8 @@ export default function Projects() {
     {
       title: "PayWay.in",
       description:
-        "A payment gateway like Razorpay + virtual banking with account system & transactions.",
+        "PayWay is a MERN stack payment app with OTP-secure transactions and a responsive dashboard.
+",
       image: "payway.png",
       link: "https://payway-in.onrender.com/main",
       tech: "React, MERN, MVC Architecture",
