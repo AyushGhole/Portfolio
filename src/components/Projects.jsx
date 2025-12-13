@@ -29,8 +29,7 @@ export default function Projects() {
     {
       title: "PayWay.in",
       description:
-        "PayWay is a MERN stack payment app with OTP-secure transactions and a responsive dashboard.
-",
+        "PayWay is a MERN stack payment app with OTP-secure transactions and a responsive dashboard.",
       image: "payway.png",
       link: "https://payway-r2pg.onrender.com/",
       tech: "React, MERN, Tailwind, MUI ,MVC Architecture",
