@@ -21,7 +21,9 @@ import {
   SiMysql,
   SiTailwindcss,
   SiC,
-  SiFirebase 
+  SiFirebase,
+  SiVercel ,
+  SiRender
 } from "react-icons/si";
 
 export default function Skills() {
@@ -42,6 +44,8 @@ export default function Skills() {
     { name: "Firease", icon: <SiFirebase   className="text-[#d92307]" /> },
     { name: "Git", icon: <FaGit className="text-sky-300" /> },
     { name: "GitHub", icon: <FaGithub className="text-[#caeddf]" /> },
+    { name: "Render", icon: <SiRender  className="text-[#2e6ef0]" /> },
+    { name: "Vercel", icon: <SiVercel  className="text-[#ba93b9]" /> },
   ];
 
   return (
