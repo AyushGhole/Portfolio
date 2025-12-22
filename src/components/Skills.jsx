@@ -11,7 +11,9 @@ import {
   FaJsSquare,
   FaJava,
   FaExchangeAlt, 
-  FaPython // ✅ For REST APIs
+  FaPython,
+  FaGit ,
+  FaGithub 
 } from "react-icons/fa";
 import {
   SiExpress,
@@ -36,8 +38,10 @@ export default function Skills() {
     { name: "Java (DSA)", icon: <FaJava className="text-red-600" /> },
     { name: "REST API’s", icon: <FaExchangeAlt className="text-indigo-600" /> },
     { name: "MERN Stack", icon: <FaDatabase className="text-purple-800" /> },
-    { name: "Python", icon: <FaPython  className="text-[#401559]" /> },
-    { name: "Firease", icon: <SiFirebase   className="text-red-200" /> },
+    { name: "Python", icon: <FaPython  className="text-[#8860a1]" /> },
+    { name: "Firease", icon: <SiFirebase   className="text-[#d92307]" /> },
+    { name: "Git", icon: <FaGit className="text-sky-300" /> },
+    { name: "GitHub", icon: <FaGithub className="text-[#caeddf]" /> },
   ];
 
   return (
