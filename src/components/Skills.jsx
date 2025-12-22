@@ -34,8 +34,8 @@ export default function Skills() {
     { name: "C", icon: <SiC className="text-blue-500" /> },
     { name: "Java (DSA)", icon: <FaJava className="text-red-600" /> },
     { name: "REST API’s", icon: <FaExchangeAlt className="text-indigo-600" /> },
-    { name: "MERN Stack", icon: <FaDatabase className="text-purple-500" /> },
-    { name: "Python", icon: <FaPython  className="text-purple-500" /> },
+    { name: "MERN Stack", icon: <FaDatabase className="text-purple-800" /> },
+    { name: "Python", icon: <FaPython  className="text-red-600" /> },
   ];
 
   return (
