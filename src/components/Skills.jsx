@@ -41,7 +41,7 @@ export default function Skills() {
     { name: "REST API’s", icon: <FaExchangeAlt className="text-indigo-600" /> },
     { name: "MERN Stack", icon: <FaDatabase className="text-purple-800" /> },
     { name: "Python", icon: <FaPython  className="text-[#8860a1]" /> },
-    { name: "Firease", icon: <SiFirebase   className="text-[#d92307]" /> },
+    { name: "Firebase", icon: <SiFirebase   className="text-[#d92307]" /> },
     { name: "Git", icon: <FaGit className="text-sky-300" /> },
     { name: "GitHub", icon: <FaGithub className="text-[#caeddf]" /> },
     { name: "Render", icon: <SiRender  className="text-[#2e6ef0]" /> },
