@@ -19,6 +19,7 @@ import {
   SiMysql,
   SiTailwindcss,
   SiC,
+  SiFirebase 
 } from "react-icons/si";
 
 export default function Skills() {
@@ -35,7 +36,8 @@ export default function Skills() {
     { name: "Java (DSA)", icon: <FaJava className="text-red-600" /> },
     { name: "REST API’s", icon: <FaExchangeAlt className="text-indigo-600" /> },
     { name: "MERN Stack", icon: <FaDatabase className="text-purple-800" /> },
-    { name: "Python", icon: <FaPython  className="text-red-600" /> },
+    { name: "Python", icon: <FaPython  className="text-[#401559]" /> },
+    { name: "Firease", icon: <SiFirebase   className="text-red-200" /> },
   ];
 
   return (
